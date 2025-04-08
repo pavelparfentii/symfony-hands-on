@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block bread %}
+-> Login
+{% endblock %}
+
+{% block body %}
+    <form action="{{ path('app_login') }}" method="post">
+        <div>
+            <label for=""
+                   class="block text-sm text-gray-700 dark:text-gray-300 font-medium">Email</label>
+            <input type="text"
+                   name="_username"
+                   value="{{ lastUsername }}"
+                   class="block w-full shadow-sm border-gray dark:border-transparent dark:text-gray-800 rounded-md border p-2 mt-1 mb-2"></input>
+        </div>
+        <div>
+            <label for="_password"
+                   class="block text-sm text-gray-700 dark:text-gray-300 font-medium">Password</label>
+            <input type="password"
+                   name="_password"
+                   value=""
+                   class="block w-full shadow-sm border-gray dark:border-transparent dark:text-gray-800 rounded-md border p-2 mt-1 mb-2"></input>
+        </div>
+
+        <input type="hidden"
+               name="_target_path"
+               value="/micro-post"></input>
+
+        <div>
+            <button type="submit"
+                    class="block w-full shadow-sm border-transparent hover:bg-indgo-700 dark:hover:bg-indigo-400 text-white rounded-md border p-2 mt-4 mb-2">Login
+            </button>
+        </div>
+
+    </form>
+{% endblock %}
