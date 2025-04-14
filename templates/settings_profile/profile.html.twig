@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Setting Profile {% endblock %}
+
+{% block bread %}
+    -> Setting Profile
+{% endblock %}
+
+{% block body %}
+    {#    <div>{{ form(form) }}</div>#}
+    {{ form_start(form) }}
+    {{ include('settings_profile/_profile_form.html.twig') }}
+
+    <div>
+        <button type="submit"
+                class="block w-full shadow-sm border-transparent hover:bg-indgo-700 dark:hover:bg-indigo-400 text-white rounded-md border p-2 mt-4 mb-2">Save Settings
+        </button>
+    </div>
+    {{ form_end(form) }}
+
+{% endblock %}

@@ -11,7 +11,8 @@ class UserChecker implements UserCheckerInterface{
     /**
      * @var \App\Entity\User $user
     */
-    public function checkPreAuth(UserInterface $user){
+    public function checkPreAuth(UserInterface $user): void
+    {
         if($user->getBannedUntil() === null){
             return;
         }
@@ -22,5 +23,6 @@ class UserChecker implements UserCheckerInterface{
             throw new AccessDeniedException('This user is banned.');
         }
     }
-    public function checkPostAuth(UserInterface $user){}
+    public function checkPostAuth(UserInterface $user): void
+    {}
 }
