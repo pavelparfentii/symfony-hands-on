@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}User Profile{% endblock %}
+{% block title %}User Follows{% endblock %}
 
 {% block bread %}
-    -> User Profile
+    -> User Profile -> Follows
 {% endblock %}
 
 {% block body %}
@@ -13,6 +13,6 @@
 
     {{ include('user_profile/profile_tabs.html.twig') }}
 
-    {{ include ('micro_post/_posts_list.html.twig', { posts: user.posts }) }}
+    {{ include ('follower/_follower_list.html.twig', { users: user.follows }) }}
 
 {% endblock %}
