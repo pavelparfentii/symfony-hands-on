@@ -13,6 +13,7 @@
 
     {{ include('user_profile/profile_tabs.html.twig') }}
 
-    {{ include ('micro_post/_posts_list.html.twig', { posts: user.posts }) }}
+{#    {{ include ('micro_post/_posts_list.html.twig', { posts: user.posts }) }}#}
+    {{ include ('micro_post/_posts_list.html.twig', { posts: posts }) }}
 
 {% endblock %}
